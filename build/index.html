@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Press Start 2P', cursive;
+            background-color: #000;
+            color: #fff;
+        }
+        h1 {
+            display: flex;
+            justify-content: center;
+        }
+        h1,
+        h1 i {
+            font-size: 24px;
+            text-align: center;
+            text-transform: uppercase;
+            font-weight: normal;
+            font-style: normal;
+        }
+        .container {
+            max-width: 760px;
+            margin: 0 auto;
+        }
+
+        .field {
+            height: 540px;
+            width: 100%;
+            display: flex;
+            border: 2px solid #fff;
+        }
+
+        .game {
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .info {
+            margin-left: 20px;
+            font-size: 14px;
+            width: 200px;
+        }
+
+        .info_head {
+            margin: 20px 0 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>
+            <i style="color: #FF851B">T</i>
+            <i style="color: #FF4136">e</i>
+            <i style="color: #B10DC9">t</i>
+            <i style="color: #0074D9">r</i>
+            <i style="color: #2ECC40">i</i>
+            <i style="color: #FFDC00">s</i>
+        </h1>
+    </div>
+    <div class="container">
+        <div class="game">
+            <div id="field" class="field"></div>
+            <div id="info" class="info">
+                <div class="info_head">Score:</div>
+                <div class="info_content">123456</div>
+                <div class="info_head">More :</div>
+                <div class="info_content">Some text</div>
+            </div>
+        </div>
+    </div>
+    <script src="tetris.js"></script>
+    <script>
+        const tetris = new tetrisGame({
+            size: {
+                x: 10,
+                y: 20
+            }
+        })
+    </script>
+</body>
+</html>
