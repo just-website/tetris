@@ -1,6 +1,7 @@
 import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import babel from 'rollup-plugin-babel';
+const isProduction = process.env.BUILD === 'production';
 
 export default {
     input: 'src/main.js',
@@ -11,7 +12,7 @@ export default {
     },
     plugins: [
         resolve(),
-        babel({
+        isProduction && babel({
             exclude: 'node_modules/**' // only transpile our source code
         }), 
 		commonjs()
