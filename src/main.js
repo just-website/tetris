@@ -1,10 +1,8 @@
-import Model from './Model';
+import Controller from './controller';
 
 class Interface {
     constructor(options) {
-        this.model = new Model({
-            size: options.size,
-        });
+        this.controller = new Controller(options);
         if (!Interface._instance)
         {
             Interface._instance = this;
